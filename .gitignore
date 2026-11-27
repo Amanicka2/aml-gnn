@@ -9,3 +9,6 @@ __pycache__/
 .ipynb_checkpoints/
 .env
 .DS_Store
+mlflow.db
+artifacts/
+data/duckdb_tmp/

@@ -1,0 +1,69 @@
+/sessions/rcw-014uwlb337ppbkfpgdyxkbee/mnt/aml-gnn/src/models/train_xgb.py:68: DeprecationWarning: fetch_arrow_reader() is deprecated, use to_arrow_reader() instead.
+  ).fetch_arrow_reader(200_000)
+[  3.0s] train: 3,047,007 rows, 2,299 laundering
+[  3.7s] val: 1,015,669 rows, 1,080 laundering
+[  4.6s] test: 1,015,669 rows, 1,798 laundering
+2026/11/27 07:34:19 INFO mlflow.store.db.utils: Creating initial MLflow database tables...
+2026/11/27 07:34:19 INFO mlflow.store.db.utils: Updating database tables
+2026/11/27 07:34:20 INFO mlflow.tracking.fluent: Experiment with name 'aml-baselines' does not exist. Creating a new experiment.
+[0]	val-aucpr:0.03751
+[50]	val-aucpr:0.49466
+[100]	val-aucpr:0.52408
+[150]	val-aucpr:0.53068
+[200]	val-aucpr:0.53084
+[213]	val-aucpr:0.53158
+[ 42.1s] trained, best iteration 163
+{
+  "val": {
+    "f1": 0.5593514765489288,
+    "precision": 0.7465224111282844,
+    "recall": 0.44722222222222224,
+    "pr_auc": 0.5320708254323209,
+    "tp": 483,
+    "fp": 164,
+    "fn": 597,
+    "n_pos": 1080,
+    "n": 1015669
+  },
+  "test": {
+    "f1": 0.576510067114094,
+    "precision": 0.7267343485617598,
+    "recall": 0.4777530589543938,
+    "pr_auc": 0.566848163675924,
+    "tp": 859,
+    "fp": 323,
+    "fn": 939,
+    "n_pos": 1798,
+    "n": 1015669
+  },
+  "test_no_tail": {
+    "f1": 0.45109567076429713,
+    "precision": 0.5796703296703297,
+    "recall": 0.36920384951881013,
+    "pr_auc": 0.41697691642402623,
+    "tp": 422,
+    "fp": 306,
+    "fn": 721,
+    "n_pos": 1143,
+    "n": 1014561
+  },
+  "threshold": 0.27403271198272705,
+  "best_iteration": 163
+}
+
+Top 15 features by gain:
+payment_format         94.9
+cross_currency         72.1
+self_transfer          43.7
+dst_in_cnt_all         38.3
+src_acct_age_min       37.1
+dst_in_uniq_7d         32.5
+src_out_uniq_7d        26.1
+cross_bank             19.8
+src_in_amt_mean_24h    19.6
+src_out_uniq_24h       19.2
+src_out_cnt_7d         14.7
+src_out_cnt_24h        13.4
+dst_in_uniq_24h        13.4
+amt_rel                12.1
+src_in_uniq_24h        11.4
