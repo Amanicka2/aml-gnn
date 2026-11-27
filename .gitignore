@@ -1,0 +1,11 @@
+data/*
+!data/.gitkeep
+*.duckdb
+*.duckdb.wal
+mlruns/
+mlartifacts/
+__pycache__/
+.venv/
+.ipynb_checkpoints/
+.env
+.DS_Store
