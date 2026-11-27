@@ -12,3 +12,4 @@ __pycache__/
 mlflow.db
 artifacts/
 data/duckdb_tmp/
+logs/
